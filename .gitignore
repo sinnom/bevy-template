@@ -1,3 +1,8 @@
 # THIS FILE IS NOT INCLUDED IN THE CARGO-GENERATE TEMPLATE
 # See .gitignore.liquid if you want to modify the gitignore that will be generated
+
+# Rust
+target/
+
 test-generate/
+
