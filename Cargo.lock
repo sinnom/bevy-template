@@ -345,7 +345,22 @@ name = "bevy-template"
 version = "0.1.0"
 dependencies = [
  "bevy",
+ "bevy-ui-dsl",
  "leafwing-input-manager",
+]
+
+[[package]]
+name = "bevy-ui-dsl"
+version = "0.7.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "8b392781bed46ab0670f0ef61da14a28261e6a024b6c6bae730f366c49cdcee1"
+dependencies = [
+ "bevy_asset",
+ "bevy_ecs",
+ "bevy_hierarchy",
+ "bevy_render",
+ "bevy_text",
+ "bevy_ui",
 ]
 
 [[package]]
