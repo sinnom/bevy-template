@@ -9,12 +9,12 @@ pub fn c_root(b: &mut NodeBundle) {
 
 pub fn c_half(b: &mut NodeBundle) {
     let s = &mut b.style;
-    s.width = Val::Percent(50.);
-    s.height = Val::Percent(100.);
-    s.flex_direction = FlexDirection::Column;
-    s.justify_content = JustifyContent::Center;
-    s.align_items = AlignItems::Center;
-    s.padding = UiRect::all(Val::Px(10.));
+    s.width = pc(50);
+    s.height = pc(100);
+    s.flex_direction = COLUMN;
+    s.justify_content = JUSTIFY_CENTER;
+    s.align_items = ALIGN_CENTER;
+    s.padding = all(px(10));
 }
 
 pub fn c_green(b: &mut NodeBundle) {
