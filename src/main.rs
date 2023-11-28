@@ -1,7 +1,7 @@
+use crate::ui::menu::MenuPlugin;
 use bevy::prelude::*;
-use menu::MenuPlugin;
 
-mod menu;
+mod ui;
 
 #[derive(States, Debug, Default, Hash, PartialEq, Eq, Clone)]
 enum GameState {
