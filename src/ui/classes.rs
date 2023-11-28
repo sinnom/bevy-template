@@ -3,13 +3,20 @@ use bevy_ui_dsl::class_helpers::*;
 use bevy_ui_dsl::*;
 
 pub fn c_root(b: &mut NodeBundle) {
-    b.style.width = pc(100.);
-    b.style.height = pc(100.)
+    let s = &mut b.style;
+    s.width = pc(100.);
+    s.height = pc(100.);
+    s.flex_direction = COLUMN;
+    s.justify_content = JUSTIFY_CENTER;
+    s.align_items = ALIGN_CENTER;
+    s.padding = all(px(10));
 }
 
-pub fn c_half(b: &mut NodeBundle) {
+// pub fn
+
+pub fn c_menu(b: &mut NodeBundle) {
     let s = &mut b.style;
-    s.width = pc(50);
+    s.width = pc(30);
     s.height = pc(100);
     s.flex_direction = COLUMN;
     s.justify_content = JUSTIFY_CENTER;
@@ -27,6 +34,15 @@ pub fn c_blue(b: &mut NodeBundle) {
 
 pub fn c_text(_a: &AssetServer, b: &mut TextBundle) {
     b.style.margin = UiRect::all(Val::Px(10.));
+}
+
+pub fn c_menu_button(assets: &AssetServer, b: &mut ButtonBundle) {
+    let s = &mut b.style;
+    s.height = Val::VMin(15.);
+    s.width = pc(100);
+    b.background_color = Color::rgb_u8(66, 135, 245).into();
+    s.justify_content = JustifyContent::Center;
+    s.align_items = AlignItems::Center;
 }
 
 pub fn c_button_left(assets: &AssetServer, b: &mut ButtonBundle) {
@@ -61,8 +77,8 @@ pub fn c_inv_slot(assets: &AssetServer, b: &mut ImageBundle) {
     // b.image = assets.load("item_slot.png").into();
 }
 
-pub fn c_pixel(assets: &AssetServer, s: &mut TextStyle) {
+pub fn c_comfortaa(assets: &AssetServer, s: &mut TextStyle) {
     s.font = assets.load("Comfortaa-Bold.ttf").into();
-    s.font_size = 8.;
+    s.font_size = 30.;
     s.color = Color::WHITE.into();
 }
