@@ -1,4 +1,5 @@
 use bevy::prelude::*;
+use menu::MenuPlugin;
 
 mod menu;
 
@@ -12,6 +13,7 @@ enum GameState {
 fn main() {
     App::new()
         .add_plugins(DefaultPlugins)
+        .add_plugins(MenuPlugin)
         .add_state::<GameState>()
         .run();
 }
